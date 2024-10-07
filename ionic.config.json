@@ -1,0 +1,7 @@
+{
+  "name": "home-management-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
