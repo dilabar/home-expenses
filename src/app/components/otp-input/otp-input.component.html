@@ -1,0 +1,13 @@
+<div class="otp-input" style="display: flex; gap: 10px;">
+  <input
+    *ngFor="let digit of otp; let i = index"
+    type="number"
+    name="otpInput"
+    maxlength="1"
+    (input)="onInput($event, i)"
+    (keydown)="onKeyDown($event, i)"
+    [value]="otp[i]"
+    id="{{i}}"
+    style="width: 40px; text-align: center; font-size: 24px;"
+  />
+</div>

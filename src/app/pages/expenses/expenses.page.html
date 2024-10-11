@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="custom-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="custom-title">Transaction History</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="settings-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content pulling-text="Pull to refresh" refreshing-spinner="crescent"></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card class="balance-card">
+    <ion-card-header>
+      <ion-card-title>Total Expenses</ion-card-title>
+      <ion-card-subtitle>{{ currentMonth | date: 'MMMM yyyy' }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content class="balance-content">
+      <h1 class="balance-amount" >{{ totalExpenses | currency: 'INR' }}</h1>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-list lines="none">
+    <ion-item *ngFor="let exp of expensesList" class="transaction-item" detail>
+      <div class="transaction-icon">
+        <ion-icon name="swap-horizontal-outline" [color]="exp.isIncome ? 'success' : 'danger'"></ion-icon>
+      </div>
+      <ion-label class="transaction-details">
+        <h2>{{ exp.category_name }}</h2>
+        <p>{{ exp.date | date: 'dd MMM yyyy' }}</p>
+      </ion-label>
+      <ion-text class="transaction-amount" [color]="exp.isIncome ? 'success' : 'danger'">
+        <h3>{{ exp.total_amount | currency: 'INR' }}</h3>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="danger" (click)="openAddEXpensesModal()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

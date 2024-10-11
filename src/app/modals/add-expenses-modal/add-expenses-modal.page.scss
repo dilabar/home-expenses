@@ -1,0 +1,45 @@
+.custom-toolbar {
+    --background: var(--ion-color-primary);
+    --color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .custom-item {
+    --padding-start: 12px;
+    --padding-end: 12px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    background-color: var(--ion-color-light);
+  }
+  
+  .expense-container {
+    padding: 20px;
+  }
+  
+  .custom-save-button {
+    --background: linear-gradient(45deg, var(--ion-color-success), var(--ion-color-tertiary));
+    --color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: background 0.3s ease;
+  }
+  
+//   .custom-footer {
+//     padding: 10px;
+//     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+//   }
+  
+  .custom-save-button:hover {
+    background: var(--ion-color-success-shade);
+  }
+  
+
+  

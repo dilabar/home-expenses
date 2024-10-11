@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-title >Login v1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <ion-item  *ngIf="!pin">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" formControlName="email" required></ion-input>
+      </ion-item>
+      
+      <ion-item  *ngIf="!pin">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="password" required></ion-input>
+      </ion-item>
+      
+      <ion-item  slot="center"   *ngIf="pin">
+        <ion-label position="floating">Pin</ion-label>
+        <ion-input type="password" formControlName="pin" required></ion-input>
+        <!-- <ng-otp-input  (onInputChange)="onOtpComplete($event)" [config]="{length:4,allowNumbersOnly:true}"></ng-otp-input> -->
+      </ion-item>
+      
+      <ion-button expand="full" type="submit"  [disabled]="loginForm.invalid">Login</ion-button>
+      
+      <div >
+        <ion-button fill="clear" routerLink="/register">Don't have an account? Register</ion-button>
+      </div>
+    </form>
+</ion-content>

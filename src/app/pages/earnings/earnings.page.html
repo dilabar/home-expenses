@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="custom-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="custom-title">Transaction History</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openAddEarningModal()">
+        <ion-icon name="settings-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <!-- Salary Earnings Card -->
+  <ion-card class="earnings-card">
+    <ion-card-header color="light">
+      <ion-card-title class="card-title">
+        <ion-icon name="cash-outline"></ion-icon> Salary Earnings
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="amount-display">
+        <p class="amount">{{ salaryAmount | currency:'INR' }}</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Freelance Earnings Card -->
+  <ion-card class="earnings-card">
+    <ion-card-header color="light">
+      <ion-card-title class="card-title">
+        <ion-icon name="briefcase-outline"></ion-icon> Freelance Earnings
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="amount-display">
+        <p class="amount">{{ freelanceAmount | currency:'INR' }}</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" (click)="openAddEarningModal()">
+      <ion-icon name="add" color="light"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

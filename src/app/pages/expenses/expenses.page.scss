@@ -1,0 +1,52 @@
+.header-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .balance-card {
+    // --background: #4CAF50;
+    color: var(--ion-color-danger);
+  }
+  
+  .balance-content {
+    text-align: center;
+  }
+  
+  .balance-amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+
+  
+
+  
+  .transaction-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .transaction-icon {
+    flex-shrink: 0;
+    margin-right: 15px;
+  }
+  
+  .transaction-icon ion-icon {
+    font-size: 1.5rem;
+  }
+  
+  .transaction-details {
+    flex-grow: 1;
+    color: #666;
+  }
+  
+  .transaction-details h2 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  

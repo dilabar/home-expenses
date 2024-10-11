@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar class="custom-toolbar">
+    <ion-title class="custom-title">Add Earning</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="closeModal()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="earning-container">
+    <ion-item class="custom-item">
+      <ion-label position="floating">Earning Type</ion-label>
+      <ion-select [(ngModel)]="earningType" interface="popover">
+        <ion-select-option value="salary">Salary</ion-select-option>
+        <ion-select-option value="freelance">Freelance</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="custom-item">
+      <ion-label position="floating">Source</ion-label>
+      <ion-input [(ngModel)]="earningSource" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item class="custom-item">
+      <ion-label position="floating">Amount</ion-label>
+      <ion-input [(ngModel)]="earningAmount" type="number"></ion-input>
+    </ion-item>
+
+  
+  </div>
+</ion-content>
+<ion-footer class="custom-footer">
+  <ion-button expand="block" (click)="saveEarning()" class="custom-save-button">
+    <ion-icon slot="start" name="wallet-outline"></ion-icon>
+    Save Earning
+  </ion-button>
+</ion-footer>
