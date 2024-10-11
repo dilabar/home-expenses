@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule,ModalController } from '@ionic/angular';
+import { IonToolbar,IonButtons,IonButton,IonTitle,IonContent,ModalController,IonIcon,
+  IonHeader,IonCard,IonCardContent,IonCardHeader,IonCardTitle,IonRefresher,IonRefresherContent,
+  IonFab,IonFabButton,IonBackButton,IonCardSubtitle,IonLabel,IonList,IonItem,IonText
+
+
+ } from '@ionic/angular/standalone'; 
 import { ExpenseService } from 'src/app/services/expense.service';
 import { AddExpensesModalPage } from 'src/app/modals/add-expenses-modal/add-expenses-modal.page';
 import { addIcons } from 'ionicons';
@@ -12,7 +17,9 @@ import { home, walletOutline, add, pricetagOutline, cashOutline, swapHorizontalO
   templateUrl: './expenses.page.html',
   styleUrls: ['./expenses.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonIcon,
+    IonToolbar,IonButtons,IonButton,IonTitle,IonContent,IonHeader,IonCard,IonCardContent,IonCardHeader,IonCardTitle,IonRefresher,IonRefresherContent,
+    IonFab,IonFabButton,IonCardSubtitle,IonLabel,IonBackButton,IonList,IonItem,IonText, CommonModule, FormsModule]
 })
 export class ExpensesPage implements OnInit {
   expensesList:any[]=[]

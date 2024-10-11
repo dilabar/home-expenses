@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ModalController ,IonicModule} from '@ionic/angular';
 import { ExpenseService } from 'src/app/services/expense.service';
 import { closeOutline, walletOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
+import { IonInput,IonHeader,IonContent,IonItem,IonToolbar,IonLabel,IonButton,IonButtons,IonTitle,IonIcon,IonSelect,IonSelectOption,IonFooter,ModalController}  from '@ionic/angular/standalone'
 
 
 
@@ -13,7 +13,8 @@ import { addIcons } from 'ionicons';
   templateUrl: './add-expenses-modal.page.html',
   styleUrls: ['./add-expenses-modal.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonHeader,IonInput,IonContent,IonItem,IonToolbar,IonLabel,IonButton,IonTitle,
+    IonButtons,IonIcon,IonSelect,IonSelectOption,IonFooter, CommonModule, FormsModule]
 })
 export class AddExpensesModalPage implements OnInit {
   category_id: any;

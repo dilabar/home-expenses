@@ -2,7 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ExpenseService } from 'src/app/services/expense.service';
-import { IonicModule,ModalController } from '@ionic/angular'; 
+import { IonToolbar,IonButtons,IonButton,IonTitle,IonContent,ModalController,IonIcon,
+  IonHeader,IonCard,IonCardContent,IonCardHeader,IonCardTitle,IonRefresher,IonRefresherContent,
+  IonFab,IonFabButton,IonBackButton
+
+
+ } from '@ionic/angular/standalone'; 
 import { AddEarningModalComponent } from 'src/app/modals/add-earning-modal/add-earning-modal.component';
 import { EarningService } from 'src/app/services/earning.service';
 import { addIcons } from 'ionicons';
@@ -15,7 +20,10 @@ import { home, walletOutline, add } from 'ionicons/icons';
   templateUrl: './earnings.page.html',
   styleUrls: ['./earnings.page.scss'],
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule]
+  imports: [CommonModule, FormsModule,IonIcon,
+    IonToolbar,IonButtons,IonButton,IonTitle,IonContent,IonHeader,IonCard,IonCardContent,IonCardHeader,IonCardTitle,IonRefresher,IonRefresherContent,
+    IonFab,IonFabButton,IonBackButton
+  ]
 })
 export class EarningsPage implements OnInit {
 

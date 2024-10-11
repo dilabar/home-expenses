@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { IonInput,IonHeader,IonContent,IonItem,IonToolbar,IonLabel,IonButton,IonTitle}  from '@ionic/angular/standalone'
+
 
 @Component({
   selector: 'app-create-pin',
   templateUrl: './create-pin.page.html',
   styleUrls: ['./create-pin.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonInput,IonHeader,IonContent,IonItem,IonToolbar,IonLabel,IonButton,IonTitle, CommonModule, FormsModule]
 })
 export class CreatePinPage implements OnInit {
   pin: string = '';

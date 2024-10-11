@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController ,IonicModule} from '@ionic/angular';
+
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { closeOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
+import { IonInput,IonHeader,IonContent,IonItem,IonToolbar,IonLabel,IonButton,IonButtons,IonTitle,IonIcon,IonSelect,IonSelectOption,IonFooter,ModalController}  from '@ionic/angular/standalone'
+
 
 
 @Component({
@@ -11,7 +13,9 @@ import { addIcons } from 'ionicons';
   templateUrl: './add-earning-modal.component.html',
   styleUrls: ['./add-earning-modal.component.scss'],
   standalone: true,
-  imports: [CommonModule, FormsModule,IonicModule]
+  imports: [CommonModule, FormsModule,IonHeader,IonContent,IonItem,IonToolbar,IonLabel,IonButton,IonTitle,
+    IonInput,IonButtons,IonIcon,IonSelect,IonSelectOption,IonFooter
+  ]
 })
 export class AddEarningModalComponent  implements OnInit {
 

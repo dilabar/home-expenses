@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
 import { AccountService } from '../services/account.service';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../services/auth.service';
@@ -7,6 +6,10 @@ import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { home, locateOutline, logOutOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
+import { IonHeader,IonContent,IonItem,IonToolbar,IonLabel,IonButton,IonTitle,
+  IonRefresher,IonRefresherContent,IonButtons,IonIcon,IonCard,IonCardContent,IonCardHeader,IonCardTitle
+}  from '@ionic/angular/standalone'
+
 
 
 @Component({
@@ -14,7 +17,9 @@ import { addIcons } from 'ionicons';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule,CommonModule],
+  imports: [IonHeader,IonContent,IonItem,IonToolbar,IonLabel,IonButton,IonTitle,IonRefresher,IonRefresherContent,IonButtons,IonIcon,
+    IonCard,IonCardContent,IonCardHeader,IonCardTitle
+    ,CommonModule],
 })
 export class HomePage implements OnInit {
   totalavl!: number;
