@@ -218,6 +218,9 @@ ionicons/components
 
 ionicons/icons
 
+ng-otp-input
+MIT
+
 rxjs
 Apache-2.0
                                Apache License
